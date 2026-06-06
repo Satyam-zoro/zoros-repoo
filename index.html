@@ -17,6 +17,7 @@
       --amethyst: #c471ed;
       --amethyst-dark: #510f6c;
       --neon-green: #00ffcc;
+      --neon-green-dark: #006655;
       --border-color: #f8f6f1;
       --font: 'VT323', monospace;
     }
@@ -115,6 +116,7 @@
       transform: translateY(-2px);
     }
 
+    /* --- PORTFOLIO GRID --- */
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -179,8 +181,50 @@
       outline: none;
     }
 
+    /* --- CONTACT SECTION --- */
+    .contact-panel {
+      max-width: 800px;
+      margin: 80px auto 20px auto;
+      background: #000;
+      border: 4px solid var(--neon-green);
+      padding: 20px;
+      box-shadow: 8px 8px 0px var(--neon-green-dark);
+      text-align: center;
+    }
+
+    .contact-title {
+      color: var(--amethyst);
+      font-size: 2rem;
+      margin-top: 0;
+      margin-bottom: 15px;
+      border-bottom: 2px dashed #444;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .contact-info p {
+      font-size: 1.8rem;
+      margin: 10px 0;
+      letter-spacing: 1px;
+    }
+
+    .contact-info .label {
+      color: var(--neon-green);
+    }
+
+    .contact-info a {
+      color: var(--text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-info a:hover {
+      color: var(--amethyst);
+    }
+
+    /* --- FOOTER --- */
     footer {
-      margin-top: 80px;
+      margin-top: 60px;
       text-align: center;
       font-size: 1.5rem;
       color: #888;
@@ -204,7 +248,7 @@
     @media (max-width: 768px) {
       h1 { font-size: 3rem; text-shadow: 3px 3px 0px var(--amethyst-dark), 6px 6px 0px var(--amethyst); }
       .portfolio-grid { grid-template-columns: 1fr; padding: 0 10px; }
-      .player-stats { margin: 0 10px 40px 10px; }
+      .player-stats, .contact-panel { margin-left: 10px; margin-right: 10px; }
     }
   </style>
 </head>
@@ -427,6 +471,15 @@
     </div>
 
   </main>
+
+  <!-- Contact Panel -->
+  <section class="contact-panel">
+    <h2 class="contact-title">/// CONTACT PLAYER 1 ///</h2>
+    <div class="contact-info">
+      <p><span class="label">EMAIL:</span> <a href="mailto:satyam20039973@mail.com">satyam20039973@mail.com</a></p>
+      <p><span class="label">DISCORD:</span> soberzoro</p>
+    </div>
+  </section>
 
   <footer>
     <p>PRESS START TO PLAY // <span class="insert-coin">INSERT COIN</span></p>
